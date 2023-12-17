@@ -1,0 +1,17 @@
+# Use a custom public key (for demonstration purposes)
+custom_public_key = (1723, 5, 432)  # Replace with actual values
+
+# Encrypt and decrypt a message using the custom public key
+message = 99
+print("Original Message:", message)
+
+# Encrypt the message with the custom public key
+custom_ciphertext = encrypt(message, custom_public_key)
+print("Custom Ciphertext:", custom_ciphertext)
+
+# Attempt to decrypt with the original key (should not work)
+try:
+    decrypted_message = decrypt(custom_ciphertext, public_key, private_key)
+    print("Decrypted message (using incorrect key):", decrypted_message)
+except ValueError as e:
+    print(f"Decryption Error: {e}")
