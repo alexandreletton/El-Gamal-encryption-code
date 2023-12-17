@@ -1,0 +1,9 @@
+# Generate key pair
+public_key, private_key = generate_keypair()
+
+# Encrypt and decrypt multiple messages
+messages = [88, 123, 7, 456]
+for message in messages:
+    ciphertext = encrypt(message, public_key)
+    decrypted_message = decrypt(ciphertext, public_key, private_key)
+    print(f"Original: {message}, Ciphertext: {ciphertext}, Decrypted: {decrypted_message}")
