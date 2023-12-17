@@ -18,7 +18,7 @@ The El Gamal encryption algorithm is particularly valuable in scenarios where se
 
 The code provides functions to generate key pairs necessary for encryption and decryption. Users can easily generate their public and private keys.
 
-```python
+```
 public_key, private_key = generate_keypair()
 
 Encryption:
@@ -26,9 +26,12 @@ ciphertext = encrypt(message, public_key)
 
 Decryption:
 decrypted_message = decrypt(ciphertext, public_key, private_key)
+```
+
 
 
 # El-Gamal-encryption-code
+```
 import random
 
 def mod_exp(base, exponent, modulus):
@@ -112,4 +115,4 @@ def is_prime(n, k=5):
 
    
 
-
+```
