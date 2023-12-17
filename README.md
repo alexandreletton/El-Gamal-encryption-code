@@ -2,10 +2,7 @@
 import random
 
 def mod_exp(base, exponent, modulus):
-    """
-    Modular exponentiation using the square-and-multiply algorithm.
-    Computes (base^exponent) % modulus efficiently.
-    """
+    
     result = 1
     while exponent > 0:
         if exponent % 2 == 1:
@@ -15,13 +12,7 @@ def mod_exp(base, exponent, modulus):
     return result
 
 def generate_keypair(p_size=1024):
-    """
-    Generate El Gamal key pair: public key (p, g, h) and private key (a).
-    - p: a large prime number
-    - g: generator modulo p
-    - h: public key, h = g^a mod p
-    - a: private key
-    """
+    
     # Generate a random prime number p
     p = random_prime(p_size)
 
@@ -39,12 +30,7 @@ def generate_keypair(p_size=1024):
     return public_key, private_key
 
 def encrypt(message, public_key):
-    """
-    Encrypt a message using El Gamal.
-    Returns a tuple (c1, c2).
-    - c1: part of the ciphertext
-    - c2: part of the ciphertext
-    """
+    
     p, g, h = public_key
     r = random.randint(2, p - 2)
     c1 = mod_exp(g, r, p)
@@ -53,10 +39,7 @@ def encrypt(message, public_key):
     return c1, c2
 
 def decrypt(ciphertext, public_key, private_key):
-    """
-    Decrypt a ciphertext using El Gamal.
-    Returns the decrypted message.
-    """
+    
     p, _, _ = public_key
     c1, c2 = ciphertext
     s_inv = mod_exp(c1, private_key, p)
@@ -64,18 +47,14 @@ def decrypt(ciphertext, public_key, private_key):
     return decrypted_message
 
 def random_prime(bit_size):
-    """
-    Generate a random prime number with the specified bit size.
-    """
+    
     while True:
         candidate = random.getrandbits(bit_size)
         if is_prime(candidate):
             return candidate
 
 def is_prime(n, k=5):
-    """
-    Check if a number is prime using the Miller-Rabin primality test.
-    """
+    
     if n <= 1 or n % 2 == 0:
         return False
 
@@ -100,5 +79,14 @@ def is_prime(n, k=5):
             return False
 
     return True
+
+
+
+
+
+
+    
+
+   
 
 
