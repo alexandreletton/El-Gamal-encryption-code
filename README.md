@@ -116,3 +116,17 @@ def is_prime(n, k=5):
    
 
 ```
+# Generate key pair
+public_key, private_key = generate_keypair()
+
+# Original message
+message = 42
+print("Original Message:", message)
+
+# Encrypt the message
+ciphertext = encrypt(message, public_key)
+print("Ciphertext:", ciphertext)
+
+# Decrypt the ciphertext
+decrypted_message = decrypt(ciphertext, public_key, private_key)
+print("Decrypted message:", decrypted_message)
