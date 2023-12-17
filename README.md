@@ -116,6 +116,8 @@ def is_prime(n, k=5):
    
 
 ```
+### Example 1: Basic Encryption and Decryption:
+```
 # Generate key pair
 public_key, private_key = generate_keypair()
 
@@ -130,3 +132,8 @@ print("Ciphertext:", ciphertext)
 # Decrypt the ciphertext
 decrypted_message = decrypt(ciphertext, public_key, private_key)
 print("Decrypted message:", decrypted_message)
+```
+### Compilation Screenshot: 
+![Capture d'écran 2023-12-17 134324](https://github.com/alexandreletton/El-Gamal-encryption-code/assets/154061117/6ad470f7-65dd-4e8e-b36a-9896072627f1)
+
+
