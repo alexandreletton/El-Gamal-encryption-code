@@ -1,3 +1,33 @@
+# El Gamal Encryption Implementation
+
+This Python implementation showcases the El Gamal encryption algorithm, a widely-used public-key cryptosystem. El Gamal is known for its security and versatility, providing both encryption and digital signatures.
+
+## Overview
+
+The El Gamal encryption algorithm is particularly valuable in scenarios where secure communication is essential. Its key features include:
+
+- **Public-Key Cryptosystem:** El Gamal is a public-key cryptosystem, which means it uses a pair of keys (public and private) for encryption and decryption. This enables secure communication over untrusted channels.
+
+- **Encryption and Digital Signatures:** Beyond encryption, El Gamal supports digital signatures, making it suitable for secure data exchange and verification of sender authenticity.
+
+- **Security:** El Gamal's security is based on the difficulty of the discrete logarithm problem, adding a robust layer of protection to encrypted messages.
+
+## How to Use
+
+### Key Generation
+
+The code provides functions to generate key pairs necessary for encryption and decryption. Users can easily generate their public and private keys.
+
+```python
+public_key, private_key = generate_keypair()
+
+Encryption:
+ciphertext = encrypt(message, public_key)
+
+Decryption:
+decrypted_message = decrypt(ciphertext, public_key, private_key)
+
+
 # El-Gamal-encryption-code
 import random
 
@@ -79,35 +109,6 @@ def is_prime(n, k=5):
             return False
 
     return True
-
-
-
-
-# El Gamal Encryption Implementation
-
-This Python implementation showcases the El Gamal encryption algorithm, a widely-used public-key cryptosystem. El Gamal is known for its security and versatility, providing both encryption and digital signatures.
-
-## Overview
-
-The El Gamal encryption algorithm is particularly valuable in scenarios where secure communication is essential. Its key features include:
-
-- **Public-Key Cryptosystem:** El Gamal is a public-key cryptosystem, which means it uses a pair of keys (public and private) for encryption and decryption. This enables secure communication over untrusted channels.
-
-- **Encryption and Digital Signatures:** Beyond encryption, El Gamal supports digital signatures, making it suitable for secure data exchange and verification of sender authenticity.
-
-- **Security:** El Gamal's security is based on the difficulty of the discrete logarithm problem, adding a robust layer of protection to encrypted messages.
-
-## How to Use
-
-### Key Generation
-
-The code provides functions to generate key pairs necessary for encryption and decryption. Users can easily generate their public and private keys.
-
-```python
-public_key, private_key = generate_keypair()
-
-
-    
 
    
 
