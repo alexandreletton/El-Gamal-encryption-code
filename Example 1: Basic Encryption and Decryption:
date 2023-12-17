@@ -1,3 +1,4 @@
+
 # Generate key pair
 public_key, private_key = generate_keypair()
 
